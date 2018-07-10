@@ -27,4 +27,4 @@ DCamProf software - https://www.ludd.ltu.se/~torger/dcamprof.html
 
 RawTherapee - http://rawtherapee.com
 
-Fast CinemaDNG Processor - www.fastcinemadng.com
+Fast CinemaDNG Processor - http://www.fastcinemadng.com
