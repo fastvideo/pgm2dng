@@ -27,4 +27,6 @@ DCamProf software - https://www.ludd.ltu.se/~torger/dcamprof.html
 
 RawTherapee - http://rawtherapee.com
 
-Fast CinemaDNG Processor - http://www.fastcinemadng.com
+Fast CinemaDNG Processor - https://www.fastcinemadng.com
+
+Fastvideo Image & Video Processing SDK for CUDA - https://www.fastcompression.com/products/sdk/sdk.htm
