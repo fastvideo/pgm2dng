@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B2068178-4753-4897-B11F-17AFC860DEF7}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pgm2dng</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)..\bin\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>qDNGXMPDocOps=0;qDNGValidateTarget=1;qMacOS=0;qWinOS=1;qDNGUseLibJPEG=0;_CRT_SECURE_NO_WARNINGS;DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Libs\zlib;..\Libs\libXMP\public\include;DNG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/MP8 %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\Libs\libXMP\public\lib\x64\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>XMPCore.lib; XMPFiles.lib; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>qDNGXMPDocOps=0;qDNGValidateTarget=1;qMacOS=0;qWinOS=1;qDNGUseLibJPEG=0;_CRT_SECURE_NO_WARNINGS;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>..\Libs\zlib;..\Libs\libXMP\public\include;DNG;</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>XMPCore.lib; XMPFiles.lib; kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\Libs\libXMP\public\lib\x64\Release;</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="cxxopts.hpp" />
+    <ClInclude Include="DNG\dng_1d_function.h" />
+    <ClInclude Include="DNG\dng_1d_table.h" />
+    <ClInclude Include="DNG\dng_abort_sniffer.h" />
+    <ClInclude Include="DNG\dng_area_task.h" />
+    <ClInclude Include="DNG\dng_assertions.h" />
+    <ClInclude Include="DNG\dng_auto_ptr.h" />
+    <ClInclude Include="DNG\dng_bad_pixels.h" />
+    <ClInclude Include="DNG\dng_bottlenecks.h" />
+    <ClInclude Include="DNG\dng_camera_profile.h" />
+    <ClInclude Include="DNG\dng_classes.h" />
+    <ClInclude Include="DNG\dng_color_space.h" />
+    <ClInclude Include="DNG\dng_color_spec.h" />
+    <ClInclude Include="DNG\dng_date_time.h" />
+    <ClInclude Include="DNG\dng_errors.h" />
+    <ClInclude Include="DNG\dng_exceptions.h" />
+    <ClInclude Include="DNG\dng_exif.h" />
+    <ClInclude Include="DNG\dng_fast_module.h" />
+    <ClInclude Include="DNG\dng_file_stream.h" />
+    <ClInclude Include="DNG\dng_filter_task.h" />
+    <ClInclude Include="DNG\dng_fingerprint.h" />
+    <ClInclude Include="DNG\dng_flags.h" />
+    <ClInclude Include="DNG\dng_gain_map.h" />
+    <ClInclude Include="DNG\dng_globals.h" />
+    <ClInclude Include="DNG\dng_host.h" />
+    <ClInclude Include="DNG\dng_hue_sat_map.h" />
+    <ClInclude Include="DNG\dng_ifd.h" />
+    <ClInclude Include="DNG\dng_image.h" />
+    <ClInclude Include="DNG\dng_image_writer.h" />
+    <ClInclude Include="DNG\dng_info.h" />
+    <ClInclude Include="DNG\dng_iptc.h" />
+    <ClInclude Include="DNG\dng_jpeg_image.h" />
+    <ClInclude Include="DNG\dng_lens_correction.h" />
+    <ClInclude Include="DNG\dng_linearization_info.h" />
+    <ClInclude Include="DNG\dng_lossless_jpeg.h" />
+    <ClInclude Include="DNG\dng_matrix.h" />
+    <ClInclude Include="DNG\dng_memory.h" />
+    <ClInclude Include="DNG\dng_memory_stream.h" />
+    <ClInclude Include="DNG\dng_misc_opcodes.h" />
+    <ClInclude Include="DNG\dng_mosaic_info.h" />
+    <ClInclude Include="DNG\dng_mutex.h" />
+    <ClInclude Include="DNG\dng_negative.h" />
+    <ClInclude Include="DNG\dng_opcodes.h" />
+    <ClInclude Include="DNG\dng_opcode_list.h" />
+    <ClInclude Include="DNG\dng_orientation.h" />
+    <ClInclude Include="DNG\dng_parse_utils.h" />
+    <ClInclude Include="DNG\dng_pixel_buffer.h" />
+    <ClInclude Include="DNG\dng_point.h" />
+    <ClInclude Include="DNG\dng_preview.h" />
+    <ClInclude Include="DNG\dng_pthread.h" />
+    <ClInclude Include="DNG\dng_rational.h" />
+    <ClInclude Include="DNG\dng_read_image.h" />
+    <ClInclude Include="DNG\dng_rect.h" />
+    <ClInclude Include="DNG\dng_reference.h" />
+    <ClInclude Include="DNG\dng_ref_counted_block.h" />
+    <ClInclude Include="DNG\dng_render.h" />
+    <ClInclude Include="DNG\dng_resample.h" />
+    <ClInclude Include="DNG\dng_sdk_limits.h" />
+    <ClInclude Include="DNG\dng_shared.h" />
+    <ClInclude Include="DNG\dng_simple_image.h" />
+    <ClInclude Include="DNG\dng_spline.h" />
+    <ClInclude Include="DNG\dng_stream.h" />
+    <ClInclude Include="DNG\dng_string.h" />
+    <ClInclude Include="DNG\dng_string_list.h" />
+    <ClInclude Include="DNG\dng_tag_codes.h" />
+    <ClInclude Include="DNG\dng_tag_types.h" />
+    <ClInclude Include="DNG\dng_tag_values.h" />
+    <ClInclude Include="DNG\dng_temperature.h" />
+    <ClInclude Include="DNG\dng_tile_iterator.h" />
+    <ClInclude Include="DNG\dng_tone_curve.h" />
+    <ClInclude Include="DNG\dng_types.h" />
+    <ClInclude Include="DNG\dng_uncopyable.h" />
+    <ClInclude Include="DNG\dng_utils.h" />
+    <ClInclude Include="DNG\dng_xmp.h" />
+    <ClInclude Include="DNG\dng_xmp_sdk.h" />
+    <ClInclude Include="DNG\dng_xy_coord.h" />
+    <ClInclude Include="DNG\RawEnvironment.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DNG\dng_1d_function.cpp" />
+    <ClCompile Include="DNG\dng_1d_table.cpp" />
+    <ClCompile Include="DNG\dng_abort_sniffer.cpp" />
+    <ClCompile Include="DNG\dng_area_task.cpp" />
+    <ClCompile Include="DNG\dng_bad_pixels.cpp" />
+    <ClCompile Include="DNG\dng_bottlenecks.cpp" />
+    <ClCompile Include="DNG\dng_camera_profile.cpp" />
+    <ClCompile Include="DNG\dng_color_space.cpp" />
+    <ClCompile Include="DNG\dng_color_spec.cpp" />
+    <ClCompile Include="DNG\dng_date_time.cpp" />
+    <ClCompile Include="DNG\dng_exceptions.cpp" />
+    <ClCompile Include="DNG\dng_exif.cpp" />
+    <ClCompile Include="DNG\dng_file_stream.cpp" />
+    <ClCompile Include="DNG\dng_filter_task.cpp" />
+    <ClCompile Include="DNG\dng_fingerprint.cpp" />
+    <ClCompile Include="DNG\dng_gain_map.cpp" />
+    <ClCompile Include="DNG\dng_globals.cpp" />
+    <ClCompile Include="DNG\dng_host.cpp" />
+    <ClCompile Include="DNG\dng_hue_sat_map.cpp" />
+    <ClCompile Include="DNG\dng_ifd.cpp" />
+    <ClCompile Include="DNG\dng_image.cpp" />
+    <ClCompile Include="DNG\dng_image_writer.cpp" />
+    <ClCompile Include="DNG\dng_info.cpp" />
+    <ClCompile Include="DNG\dng_iptc.cpp" />
+    <ClCompile Include="DNG\dng_jpeg_image.cpp" />
+    <ClCompile Include="DNG\dng_lens_correction.cpp" />
+    <ClCompile Include="DNG\dng_linearization_info.cpp" />
+    <ClCompile Include="DNG\dng_lossless_jpeg.cpp" />
+    <ClCompile Include="DNG\dng_matrix.cpp" />
+    <ClCompile Include="DNG\dng_memory.cpp" />
+    <ClCompile Include="DNG\dng_memory_stream.cpp" />
+    <ClCompile Include="DNG\dng_misc_opcodes.cpp" />
+    <ClCompile Include="DNG\dng_mosaic_info.cpp" />
+    <ClCompile Include="DNG\dng_mutex.cpp" />
+    <ClCompile Include="DNG\dng_negative.cpp" />
+    <ClCompile Include="DNG\dng_opcodes.cpp" />
+    <ClCompile Include="DNG\dng_opcode_list.cpp" />
+    <ClCompile Include="DNG\dng_orientation.cpp" />
+    <ClCompile Include="DNG\dng_parse_utils.cpp" />
+    <ClCompile Include="DNG\dng_pixel_buffer.cpp" />
+    <ClCompile Include="DNG\dng_point.cpp" />
+    <ClCompile Include="DNG\dng_preview.cpp" />
+    <ClCompile Include="DNG\dng_pthread.cpp" />
+    <ClCompile Include="DNG\dng_rational.cpp" />
+    <ClCompile Include="DNG\dng_read_image.cpp" />
+    <ClCompile Include="DNG\dng_rect.cpp" />
+    <ClCompile Include="DNG\dng_reference.cpp" />
+    <ClCompile Include="DNG\dng_ref_counted_block.cpp" />
+    <ClCompile Include="DNG\dng_render.cpp" />
+    <ClCompile Include="DNG\dng_resample.cpp" />
+    <ClCompile Include="DNG\dng_shared.cpp" />
+    <ClCompile Include="DNG\dng_simple_image.cpp" />
+    <ClCompile Include="DNG\dng_spline.cpp" />
+    <ClCompile Include="DNG\dng_stream.cpp" />
+    <ClCompile Include="DNG\dng_string.cpp" />
+    <ClCompile Include="DNG\dng_string_list.cpp" />
+    <ClCompile Include="DNG\dng_tag_types.cpp" />
+    <ClCompile Include="DNG\dng_temperature.cpp" />
+    <ClCompile Include="DNG\dng_tile_iterator.cpp" />
+    <ClCompile Include="DNG\dng_tone_curve.cpp" />
+    <ClCompile Include="DNG\dng_utils.cpp" />
+    <ClCompile Include="DNG\dng_xmp.cpp" />
+    <ClCompile Include="DNG\dng_xmp_sdk.cpp" />
+    <ClCompile Include="DNG\dng_xy_coord.cpp" />
+    <ClCompile Include="pgm2dng.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

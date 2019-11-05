@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Toolkit Core">
+      <UniqueIdentifier>{97f24335-d1e4-49e1-ab2c-e341df5a3848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Utilities">
+      <UniqueIdentifier>{604d2be4-820c-4757-a53a-cde050bf9753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\XML Parser">
+      <UniqueIdentifier>{a7c0296c-4d17-4a4d-8605-aef45ff623ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ABI Wrappers">
+      <UniqueIdentifier>{bd38a71e-44e7-4520-9852-881321b78404}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Third Party">
+      <UniqueIdentifier>{1023dec5-edb2-48b1-a1ec-94db1d993cb7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\source\XMPCore\XMPCore_Impl.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPIterator.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPMeta-GetSet.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPMeta-Parse.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPMeta-Serialize.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPMeta.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPUtils-FileInfo.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\XMPUtils.cpp">
+      <Filter>Source Files\Toolkit Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\ExpatAdapter.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third-party\MD5\MD5.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\ParseRDF.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\UnicodeConversions.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\XML_Node.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\common\XMP_LibUtils.cpp">
+      <Filter>Source Files\Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third-party\expat\lib\xmlparse.c">
+      <Filter>Source Files\XML Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third-party\expat\lib\xmlrole.c">
+      <Filter>Source Files\XML Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\third-party\expat\lib\xmltok.c">
+      <Filter>Source Files\XML Parser</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\WXMPIterator.cpp">
+      <Filter>Source Files\ABI Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\WXMPMeta.cpp">
+      <Filter>Source Files\ABI Wrappers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\source\XMPCore\WXMPUtils.cpp">
+      <Filter>Source Files\ABI Wrappers</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="expat_config.h">
+      <Filter>Source Files\XML Parser</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "pgm2dng", "pgm2dng.vcxproj", "{B2068178-4753-4897-B11F-17AFC860DEF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		DNG Validate Target Debug|x64 = DNG Validate Target Debug|x64
+		DNG Validate Target Debug|x86 = DNG Validate Target Debug|x86
+		DNG Validate Target Release|x64 = DNG Validate Target Release|x64
+		DNG Validate Target Release|x86 = DNG Validate Target Release|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+		Validate Debug|x64 = Validate Debug|x64
+		Validate Debug|x86 = Validate Debug|x86
+		Validate Release|x64 = Validate Release|x64
+		Validate Release|x86 = Validate Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Debug|x64.ActiveCfg = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Debug|x64.Build.0 = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Debug|x86.ActiveCfg = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Debug|x86.Build.0 = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Debug|x64.ActiveCfg = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Debug|x64.Build.0 = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Debug|x86.ActiveCfg = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Debug|x86.Build.0 = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Release|x64.ActiveCfg = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Release|x64.Build.0 = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Release|x86.ActiveCfg = Release|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.DNG Validate Target Release|x86.Build.0 = Release|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Release|x64.ActiveCfg = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Release|x64.Build.0 = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Release|x86.ActiveCfg = Release|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Release|x86.Build.0 = Release|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Debug|x64.ActiveCfg = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Debug|x64.Build.0 = Debug|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Debug|x86.ActiveCfg = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Debug|x86.Build.0 = Debug|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Release|x64.ActiveCfg = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Release|x64.Build.0 = Release|x64
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Release|x86.ActiveCfg = Release|Win32
+		{B2068178-4753-4897-B11F-17AFC860DEF7}.Validate Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F002B80F-CAA5-4034-B18B-C0D15DEC1832}
+	EndGlobalSection
+EndGlobal

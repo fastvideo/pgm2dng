@@ -1,0 +1,13 @@
+src/**/*.user*
+src/**/*.filters
+src/**/.vs
+src/**/x64
+
+Samples/*.dng
+
+bin/**/*.lib
+bin/**/*.iobj
+bin/**/*.ipdb
+bin/**/*.pdb
+bin/**/*.ilk
+bin/**/*.exp
