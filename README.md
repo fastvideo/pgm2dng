@@ -3,14 +3,14 @@ PGM to DNG command line converter
 
 Usage:
 pgm2dng.exe <Optiona>
-Where <Options> are:
--in - path to pgm file (mandatory)
--out - path to dng file (mandatory)
--dcp - path to dcp (digital camera profile) file (mandatory)
--pattern - CFA pattern. Alowed values: RGGB, GBRG, GRBG, BGGR (mandatory)
--wp - comma separated white point values (mandatory)
--white - white level (optional, dafault is maximem for a given bitdepth)
--black - black level (optional, default 0)
+  Where <Options> are:
+  --in=<path/to/input/file> - path to pgm file (mandatory)
+  --out=<path/to/output/file> - path to dng file (mandatory)
+  --dcp=<path/to/dcp/file> - path to dcp (digital camera profile) file (mandatory)
+  --pattern=<pattern> - CFA pattern. Alowed values: RGGB, GBRG, GRBG, BGGR (mandatory)
+  --wp=<1,1,1> - comma separated white point values (mandatory)
+  --white=<white> - white level (optional, dafault is maximem for a given bitdepth)
+  --black=<black> - black level (optional, default 0)
 
 
 Usually we get raw frame from machine vision or industrial camera as a bitmap of 8/10/12/14/16-bit values which we store as PGM (Portable Gray Map) image. Apart from bitmap we know bit depth and image resolution (width and height) for every frame. But this is not enough for good color reproduction. We also need the following:
