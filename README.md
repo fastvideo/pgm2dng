@@ -6,7 +6,7 @@ These are pgm2dng.exe command-line options: <br>
   --out=<path/to/output/file> - path to dng file (mandatory) <br>
   --dcp=<path/to/dcp/file> - path to dcp (digital camera profile) file (mandatory) <br>
   --pattern=<pattern> - CFA pattern. Alowed values: RGGB, GBRG, GRBG, BGGR (mandatory) <br>
-  --wp=<1,1,1> - comma separated white point values (mandatory) <br>
+  --wp=<R,G,B> - comma separated white point values (mandatory) <br>
   --white=<white> - white level (optional, dafault is maximem for a given bitdepth) <br>
   --black=<black> - black level (optional, default 0)
 
