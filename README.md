@@ -1,33 +1,41 @@
 # pgm2dng
-PGM to DNG command line converter
+# PGM to DNG command line converter
 
-These are pgm2dng.exe command-line options: <br>
-  --in=<path/to/input/file> - path to pgm file (mandatory) <br>
-  --out=<path/to/output/file> - path to dng file (mandatory) <br>
-  --dcp=<path/to/dcp/file> - path to dcp (digital camera profile) file (mandatory) <br>
-  --pattern=<pattern> - CFA pattern. Alowed values: RGGB, GBRG, GRBG, BGGR (mandatory) <br>
-  --wp=<R,G,B> - comma separated white point values (mandatory) <br>
-  --white=<white> - white level (optional, dafault is maximem for a given bitdepth) <br>
-  --black=<black> - black level (optional, default 0)
+pgm2dng is a command line converter, that converts pgm files with raw CFA data into DNG format, that could be processed with raw processors (Adobe Camera Raw, Raw Therapee, Fast CinemaDNG Processor). Usually we get raw frame from machine vision or industrial camera as a bitmap of 8/10/12/14/16-bit values which we store as PGM (Portable Gray Map) image. Apart from bitmap we know bit depth and image resolution (width and height) for every frame. But this is not enough for good color reproduction.. For raw processor to correctly work with resulting DNGs we also should provide some additional information:
+* DCP (digital camera profile) file, that contains color transformation information (at least 3x3 color matrix and illuminant information). If you don't have this profile, you can do the follopwing:
+	- Try to find sutable profile in the  DCPProfiles folder of this ropsitory.
+	- Try to find sutable profile in the internet.
+	- If you have DNG file from the camer of the same model, you can use dcptool to decompile it to xml file and compile that xml file into dcp.
+	- Create your own profile with DCamProf and color checker. You will need a shot of color checker in linear color space (some camera can shoot in log or other non linear color spaces, so you should switch it to linear mode). To create profile with DcamProf you will have to demosaic (debayer) raw gray image into RGB one. For that purpose one can use fastDebayer freeware application from Fastvideo.
+* White point - RGB values of gray patch from color checker or gray card. These values provide correct white balance on processed image. One of the ways to obtain these values is to  demosaic (debayer) raw gray image into RGB one. For that purpose one can use fastDebayer freeware application from Fastvideo. Then open this image into graphics editor (Photoshop or GIMP) and get these values with color picker.
+* CFA (bayer) pattern. This information is required for color processor to correctly convert gray raw to RGB image.
 
-Usually we get raw frame from machine vision or industrial camera as a bitmap of 8/10/12/14/16-bit values which we store as PGM (Portable Gray Map) image. Apart from bitmap we know bit depth and image resolution (width and height) for every frame. But this is not enough for good color reproduction. We also need the following:
-1. White balance coefficients (three coefficients for red, green and blue channels)
-2. DCP profile, which contains at least 3x3 color matrix
-3. CFA (bayer) pattern
+## Usage
+pgm2dng.exe command-line options: --in=< path/to/input/file >  --out=< path/to/output/file >--dcp=< path/to/dcp/file >  --wp=< R,G,B > --white=< white >  --black=< black >  --compress<br>
 
-To get the above data, we need to perform color calibration with Color Checker and calibrated light sources. Camera manufacturers does that calibration by themselves because they posess high quality and well-calibrated light sources. If current illumination is different, one can compute color transform to take that into account, but we need original color calibration data, which is supplied by camera manufacturer.
+Where: 
 
-To describe the situation in more detail, we get raw data at camera colorspace, and we need to transform that data to any colorspace that we know. Usually we need to transform data from camera colorspace to intermediary XYZ colorspace and later on we will know how to transform the image to any colorspace that we need.
+  --in=< path/to/input/file > - path to pgm file (mandatory). 8, 10, 12, 14, 16 bits per pixel PGMs are supported, but 10 bit PGMs are encoded as 16 bit DNGs.<br>
+  --out=< path/to/output/file > - path to dng file (mandatory) <br>
+  --dcp=< path/to/dcp/file > - path to dcp (digital camera profile) file (mandatory) <br>
+  --pattern=< pattern > - CFA pattern. Alowed values: RGGB, GBRG, GRBG, BGGR (mandatory) <br>
+  --wp=< R,G,B > - comma separated white point values (mandatory) <br>
+  --white=< white > - white level (optional, dafault is maximem for a given bitdepth) <br>
+  --black=< black > - black level (optional, default 0) <br>
+  --compress - compress image with lossless jpeg <br>
 
-Algorithm for PGM2DNG transform
-1. Take a shot and capture Color Checker image (optionally save it as PGM file)
-2. Recognize all 24 squares from the shot
-3. Compute WB coefficients
-4. Load Color Checker image to DCamProf software to get DCP profile
-5. Create DNG image from WB coefficients, DCP profile and PGM data
-6. Optionally view DNG image at Fast CinemaDNG Processor or Raw Therapee
+## Compile and build
+To build pgm2dng from source you need Visuil C++ 2017. For use with other compiler you should recompile XMP SDK. Currently it is built as a static lib with Visuil C++ 2017, so if you need another compiler you should rebuild it with it and setup your build environment to point to correct lib files.
 
-Useful links:
+To build application with Visuil C++ 2017:
+* Open pgm2dng.sln file with Visuil Studio 2017
+* Set build configuration to Release.
+* Select Build\Build solution menu item, or press Ctrl + Shift + B.
+* pgm2dng.exe will be placed into bin filder for release build and into src\x64 for debug build.
+
+To tes application run test.cmd from bin folder. This script will process sample 8/10/12/14/16 pgm files from Samples folder with and without lossless jpeg compression.
+
+##Useful links:
 
 Adobe DNG Software Development Kit (SDK) 1.4 - https://www.adobe.com/support/downloads/dng/dng_sdk.html
 

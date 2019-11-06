@@ -232,6 +232,7 @@
     <ClInclude Include="DNG\dng_xmp_sdk.h" />
     <ClInclude Include="DNG\dng_xy_coord.h" />
     <ClInclude Include="DNG\RawEnvironment.h" />
+    <ClInclude Include="dng_ext_image_writer.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
@@ -299,6 +300,7 @@
     <ClCompile Include="DNG\dng_xmp.cpp" />
     <ClCompile Include="DNG\dng_xmp_sdk.cpp" />
     <ClCompile Include="DNG\dng_xy_coord.cpp" />
+    <ClCompile Include="dng_ext_image_writer.cpp" />
     <ClCompile Include="pgm2dng.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
