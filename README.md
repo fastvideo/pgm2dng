@@ -6,7 +6,8 @@ pgm2dng is a command line converter, that converts pgm files with raw CFA data i
 	- Try to find sutable profile in the  DCPProfiles folder of this ropsitory.
 	- Try to find sutable profile in the internet.
 	- If you have DNG file from the camer of the same model, you can use dcptool to decompile it to xml file and compile that xml file into dcp.
-	- Create your own profile with DCamProf and color checker. You will need a shot of color checker in linear color space (some camera can shoot in log or other non linear color spaces, so you should switch it to linear mode). To create profile with DcamProf you will have to demosaic (debayer) raw gray image into RGB one. For that purpose one can use fastDebayer freeware application from Fastvideo.
+	- Create your own profile with DCamProf and color checker. You will need a shot of color checker in linear color space (some camera can shoot in log or other non linear color spaces, so you should switch it to linear mode). To create profile with DcamProf you will have to demosaic (debayer) raw gray image into RGB one. For that purpose one can use fastDebayer freeware application from Fastvideo. For more details see [Basic workflow for making a DNG profile using a color checker and DcamProf](doc/DCP.MD "Basic workflow for making a DNG profile using a color checker and DcamProf")
+	
 * White point - RGB values of gray patch from color checker or gray card. These values provide correct white balance on processed image. One of the ways to obtain these values is to  demosaic (debayer) raw gray image into RGB one. For that purpose one can use fastDebayer freeware application from Fastvideo. Then open this image into graphics editor (Photoshop or GIMP) and get these values with color picker.
 * CFA (bayer) pattern. This information is required for color processor to correctly convert gray raw to RGB image.
 
