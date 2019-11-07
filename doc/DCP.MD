@@ -2,11 +2,11 @@
 * Download DcamProf from https://www.ludd.ltu.se/~torger/dcamprof.html and Argyll CMS from https://www.argyllcms.com/downloadwin.html
 * Get a physical test target. The classic Macbeth/X-Rite 24 patch color checker is a fine choice.
 
-* Get calibrated light source. For single illuminant profile D50 is recommended, for dual illuminant profile StandardA and D65 are recommended. If you don't have calibrated light source use LED lamp with temperature 5000K for a rough alternative of D50 light
+* Get calibrated light source. For single illuminant profile D50 is recommended, for dual illuminant profile StandardA and D65 are recommended. If you don't have calibrated light source shoot your target  outside in real daylight or use LED lamp with temperature 5000K for a rough alternative of D50 light
 
 * Get a reference file for the test target, preferably containing reflectance spectra. If you're using that 24 patch color checker, look for cc24_ref.cie in the DCamProf distribution. Note that X-Rite changed their formula slightly in ColorCheckers produced November 2014 and later. The bundled cc24_ref.cie is for targets produced before November 2014, and cc24_ref-new.cie is for targets produced November 2014 and later.
 
-* Shoot your test target under the desired light source. Store in pgm format.
+* Shoot your test target under the desired light source. Avoid over- or under-exposure. Store in pgm format.
 
 * Convert the raw file to a 16 bit linear TIFF without white balancing. To do that first convert it to 16 bit ppm with fastDebayer application, then use ImageMagick convert utility or image editor like GIMP or photoshop, that support 16 bit images.
 
