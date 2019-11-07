@@ -22,7 +22,7 @@ The scanin command will generate a diag.tif which shows patch matching. Look at 
 rawfile.ti3 file will contain the raw values read from rawfile.tif together with reference data from the cc24_ref.cie file.
 
 * Use DCamProf to make a profile from Argyll’s rawfile.ti3 target file.
-dcamprof make-profile -g cc24-layout.json rawfile.ti3 profile.json
+`dcamprof make-profile -g cc24-layout.json rawfile.ti3 profile.json`
 The above command doesn’t specify any illuminants, which means that the profile will be made for D50 and the rawfile.ti3 must contain reflectance spectra (it will if the example cc24_ref.cie is used) or have it’s XYZ values related to D50. To change calibration illuminant use the -i parameter, and if the .ti3 lacks reflectance spectra specify its XYZ illuminant using -I.
 Per default DCamProf will automatically relax the LUT a bit, that is prioritize smoothness over accuracy. How this is done can be precisely manually controlled if you desire, see the documentation for the make-profile command for an in-depth explanation.
 The target layout is provided in a JSON file cc24-layout.json. If the target contains both black and white patches glare will be modeled and reduced, and if the target contains several white patches (not the CC24, but for example a ColorChecker SG) it will be flatfield corrected.
