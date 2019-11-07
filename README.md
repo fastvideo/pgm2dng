@@ -35,7 +35,7 @@ To build application with Visual C++ 2017:
 
 To test the application, run test.cmd from bin folder. This script will process sample 8/10/12/14/16 PGM files from Samples folder with and without lossless jpeg compression.
 
-##Useful links:
+## Useful links:
 
 Adobe DNG Software Development Kit (SDK) 1.4 - https://www.adobe.com/support/downloads/dng/dng_sdk.html
 
