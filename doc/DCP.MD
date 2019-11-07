@@ -18,19 +18,19 @@
 Passport version: 
 `scanin -v -p -dipn rawfile.tif ColorCheckerPassport.cht cc24_ref.cie`
 The scanin command will generate a diag.tif which shows patch matching. Look at it to see that it matched. If everything is good, diag file will look like this:
-
-rawfile.ti3 file will contain the raw values read from rawfile.tif together with reference data from the cc24_ref.cie file.
 ![](diag.jpg)
-* Use DCamProf to make a profile from Argyllís rawfile.ti3 target file.
+rawfile.ti3 file will contain the raw values read from rawfile.tif together with reference data from the cc24_ref.cie file.
+
+* Use DCamProf to make a profile from Argyll‚Äôs rawfile.ti3 target file.
 dcamprof make-profile -g cc24-layout.json rawfile.ti3 profile.json
-The above command doesnít specify any illuminants, which means that the profile will be made for D50 and the rawfile.ti3 must contain reflectance spectra (it will if the example cc24_ref.cie is used) or have itís XYZ values related to D50. To change calibration illuminant use the -i parameter, and if the .ti3 lacks reflectance spectra specify its XYZ illuminant using -I.
+The above command doesn‚Äôt specify any illuminants, which means that the profile will be made for D50 and the rawfile.ti3 must contain reflectance spectra (it will if the example cc24_ref.cie is used) or have it‚Äôs XYZ values related to D50. To change calibration illuminant use the -i parameter, and if the .ti3 lacks reflectance spectra specify its XYZ illuminant using -I.
 Per default DCamProf will automatically relax the LUT a bit, that is prioritize smoothness over accuracy. How this is done can be precisely manually controlled if you desire, see the documentation for the make-profile command for an in-depth explanation.
 The target layout is provided in a JSON file cc24-layout.json. If the target contains both black and white patches glare will be modeled and reduced, and if the target contains several white patches (not the CC24, but for example a ColorChecker SG) it will be flatfield corrected.
 
 * Convert the native format profile to a DNG profile (DCP).
 `dcamprof make-dcp -n "Camera manufacturer and model" -d "My Profile" profile.json profile.dcp`
-For many raw converters the camera manufacturer and model must exactly match what the raw converter is expecting. For example if using Adobe Lightroom the name must match the name Lightroom is using for itís own DCPs.
-The description tag (set by -d, ìMy Profileî in this example) will be the one shown in the profile select box in for example Adobe Lightroom.
+For many raw converters the camera manufacturer and model must exactly match what the raw converter is expecting. For example if using Adobe Lightroom the name must match the name Lightroom is using for it‚Äôs own DCPs.
+The description tag (set by -d, ‚ÄúMy Profile‚Äù in this example) will be the one shown in the profile select box in for example Adobe Lightroom.
 
 * The DNG profile is now ready to use in your raw converter.
 
