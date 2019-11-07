@@ -18,7 +18,7 @@
 Passport version: 
 `scanin -v -p -dipn rawfile.tif ColorCheckerPassport.cht cc24_ref.cie`
 The scanin command will generate a diag.tif which shows patch matching. Look at it to see that it matched. If everything is good, diag file will look like this:
-![](diag.jpg)
+![](diag.jpg) <br>
 rawfile.ti3 file will contain the raw values read from rawfile.tif together with reference data from the cc24_ref.cie file.
 
 * Use DCamProf to make a profile from Argyll’s rawfile.ti3 target file.
