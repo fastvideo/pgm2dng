@@ -977,26 +977,26 @@ void pack14bit(dng_host &host,
             ffffgggg gggggggg
             gghhhhhh hhhhhhhh
             */
-            dstPtr[0]  = unsigned char(p0 >> 6);
-            dstPtr[1]  = unsigned char((p0 << 2)  + (p1 >> 12));
+            dstPtr[0]  = (unsigned char)(p0 >> 6);
+            dstPtr[1]  = (unsigned char)((p0 << 2)  + (p1 >> 12));
 
-            dstPtr[2]  = unsigned char(p1 >> 4);
-            dstPtr[3]  = unsigned char((p1 << 4) + (p2 >> 10));
+            dstPtr[2]  = (unsigned char)(p1 >> 4);
+            dstPtr[3]  = (unsigned char)((p1 << 4) + (p2 >> 10));
 
-            dstPtr[4]  = unsigned char(p2 >> 2);
-            dstPtr[5]  = unsigned char((p2 << 6) + (p3 >> 8));
+            dstPtr[4]  = (unsigned char)(p2 >> 2);
+            dstPtr[5]  = (unsigned char)((p2 << 6) + (p3 >> 8));
 
-            dstPtr[6]  = unsigned char(p3);
-            dstPtr[7]  = unsigned char(p4 >> 6);
+            dstPtr[6]  = (unsigned char)(p3);
+            dstPtr[7]  = (unsigned char)(p4 >> 6);
 
-            dstPtr[8]  = unsigned char((p4 << 2) + (p5 >> 12));
-            dstPtr[9]  = unsigned char(p5 >> 4);
+            dstPtr[8]  = (unsigned char)((p4 << 2) + (p5 >> 12));
+            dstPtr[9]  = (unsigned char)(p5 >> 4);
 
-            dstPtr[10] = unsigned char((p5 << 4) + (p6 >> 10));
-            dstPtr[11] = unsigned char(p6 >> 2);
+            dstPtr[10] = (unsigned char)((p5 << 4) + (p6 >> 10));
+            dstPtr[11] = (unsigned char)(p6 >> 2);
 
-            dstPtr[12] = unsigned char((p6 << 6) + (p7 >> 8));
-            dstPtr[13] = unsigned char(p7);
+            dstPtr[12] = (unsigned char)((p6 << 6) + (p7 >> 8));
+            dstPtr[13] = (unsigned char)(p7);
 
             dstPtr += 14;
             srcPtr += 8;
