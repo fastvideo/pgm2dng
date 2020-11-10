@@ -1009,7 +1009,8 @@ void dng_ext_image_writer::WriteData(dng_host &host,
                                      const dng_ifd &ifd,
                                      dng_stream &stream,
                                      dng_pixel_buffer &buffer,
-                                     AutoPtr<dng_memory_block> &compressedBuffer)
+                                     AutoPtr<dng_memory_block> &compressedBuffer,
+                                     bool usingMultipleThreads)
 {
 
 
@@ -1025,11 +1026,11 @@ void dng_ext_image_writer::WriteData(dng_host &host,
         else if(rawBpp == 14)
             pack14bit(host, stream, buffer, compressedBuffer);
 		else
-			dng_image_writer::WriteData(host, ifd, stream, buffer, compressedBuffer);
+			dng_image_writer::WriteData(host, ifd, stream, buffer, compressedBuffer, usingMultipleThreads);
     }
     else
     {
-        dng_image_writer::WriteData(host, ifd, stream, buffer, compressedBuffer);
+        dng_image_writer::WriteData(host, ifd, stream, buffer, compressedBuffer, usingMultipleThreads);
     }
  
 }
