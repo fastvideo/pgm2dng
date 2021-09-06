@@ -1180,7 +1180,12 @@ void dng_ext_image_writer::WriteDNGEx(dng_host &host,
 
     info.fSamplesPerPixel = rawImage.Planes();
 
-    info.fPhotometricInterpretation = piCFA;
+	if (negative.IsMonochrome())
+		info.fPhotometricInterpretation = piLinearRaw;
+	else
+		info.fPhotometricInterpretation = piCFA;
+
+
     info.fCompression = compression;
 
     info.fBitsPerSample[0] = uint32(rawBpp);
