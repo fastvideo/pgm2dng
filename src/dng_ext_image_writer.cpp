@@ -1046,7 +1046,7 @@ void dng_ext_image_writer::WriteDNGEx(dng_host &host,
 	//passed to base class implementation 
 	if(rawBpp != 8 && rawBpp != 12 && rawBpp != 14)
 	{
-		dng_image_writer::WriteDNG(host, stream, negative, constMetadata, previewList, maxBackwardVersion, uncompressed);
+		dng_ext_image_writer::WriteDNGEx(host, stream, negative, constMetadata, previewList, maxBackwardVersion, uncompressed);
 		return;
 	}
 
