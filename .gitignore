@@ -11,3 +11,6 @@ bin/**/*.ipdb
 bin/**/*.pdb
 bin/**/*.ilk
 bin/**/*.exp
+/Libs/LibTiff~
+/build
+/Libs/zlib
