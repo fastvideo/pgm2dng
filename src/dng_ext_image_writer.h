@@ -38,7 +38,7 @@ public:
                      const dng_metadata &constMetadata,
                      const dng_preview_list *previewList = nullptr,
                      uint32 maxBackwardVersion = dngVersion_SaveDefault,
-                     bool uncompressed = false);
+                     bool uncompressed = true);
 
     int rawBpp{12};
 
@@ -47,7 +47,8 @@ protected:
                     const dng_ifd &ifd,
                     dng_stream &stream,
                     dng_pixel_buffer &buffer,
-                    AutoPtr<dng_memory_block> &compressedBuffer) override;
+                    AutoPtr<dng_memory_block> &compressedBuffer,
+                    bool usinfMultipleThreads) override;
 };
 
 #endif // DNG_EXT_IMAGE_WRITER_H
